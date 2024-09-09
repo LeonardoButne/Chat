@@ -82,7 +82,7 @@ const handleLogin = (event) => {
     login.style.display = "none"
     chat.style.display = "flex"
 
-    websocket = new WebSocket("wss://chat-front-kappa.vercel.app/")
+    websocket = new WebSocket("wss://free-chat-front.onrender.com")
     websocket.onopen = () => websocket.send(`Usuario: ${user.name} entrou no chat`)
     
     websocket.onmessage = processMessage
