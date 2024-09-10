@@ -84,7 +84,7 @@ const createMessageOtherElement = (content, replyContent = null, messageId) => {
 
     // Exibe a mensagem que está sendo respondida no campo de envio
     const replyPreview = document.querySelector('.chat__reply-preview');
-    replyPreview.textContent = `"${content}"`;
+    replyPreview.textContent = `Respondendo a: "${content}"`;
     replyPreview.style.display = "block";  // Mostrar o preview da resposta
 };
 
@@ -153,7 +153,7 @@ const loadMessages = () => {
             if (message.replyTo) {
                 const originalMessage = snapshot.docs.find((d) => d.id === message.replyTo);
                 if (originalMessage) {
-                    replyContent = `Respondendo a: "${originalMessage.data().content}"`;
+                    // replyContent = `"${originalMessage.data().content}"`;
                 }
             }
 
