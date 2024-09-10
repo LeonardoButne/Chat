@@ -84,7 +84,7 @@ const createMessageOtherElement = (content, replyContent = null, messageId) => {
 
     // Exibe a mensagem que está sendo respondida no campo de envio
     const replyPreview = document.querySelector('.chat__reply-preview');
-    replyPreview.textContent = `Respondendo a: "${content}"`;
+    replyPreview.textContent = `"${content}"`;
     replyPreview.style.display = "block";  // Mostrar o preview da resposta
 };
 
