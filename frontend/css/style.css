@@ -85,7 +85,7 @@ body {
 
 .chat__message {
     flex-grow: 1;
-    padding: 30px 30px 90px;
+    padding: 100px 30px 90px 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -99,6 +99,18 @@ body {
     gap: 10px;
     position: fixed;
     bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.chat__users{
+    background-color: #191919;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
 }
@@ -136,6 +148,14 @@ body {
 }
 
 .message--self {
+    display: block; /* Faz o conteúdo da mensagem quebrar linha quando necessário */
+    word-wrap: break-word; /* Garante que longas palavras serão quebradas e não sairão da caixa */
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 60%; /* Limite de largura da mensagem */
+
+
     background-color: #f2f2f2;
     color: #121212;
     border-radius: 10px 10px 0 10px;
@@ -143,6 +163,14 @@ body {
 }
 
 .message--other {
+    display: block; /* Faz o conteúdo da mensagem quebrar linha quando necessário */
+    word-wrap: break-word; /* Garante que longas palavras serão quebradas e não sairão da caixa */
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 60%; /* Limite de largura da mensagem */
+
+
     background-color: #333;
     color: #f2f2f2;
     border-radius: 0 10px 10px 10px;
@@ -151,7 +179,11 @@ body {
 
 .message--sender {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     font-weight: 700;
     color: cadetblue;
+}
+
+.material-symbols-outlined {
+  font-weight: 100;
 }
